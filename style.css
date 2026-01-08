@@ -1,0 +1,60 @@
+body{
+margin:0;
+padding:20px;
+font-family:Segoe UI,sans-serif;
+background:#0f172a
+}
+.container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+.form{
+background:#111827;
+padding:20px;
+border-radius:12px;
+color:#fff
+}
+.form input{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border-radius:8px;
+border:none
+}
+.form button{
+padding:12px;
+width:100%;
+background:#2563eb;
+border:none;
+color:#fff;
+border-radius:8px
+}
+.preview{
+background:url("images/bill.jpg") center/cover no-repeat;
+min-height:935px;
+border-radius:5px;
+position:relative
+}
+.content{
+background:rgba(255,255,255,.95);
+margin:80px;
+padding:25px;
+border-radius:12px
+}
+.actions{
+max-width:1200px;
+margin:20px auto;
+display:flex;
+gap:15px
+}
+.actions button{
+width:50%;
+padding:12px;
+background:#2563eb;
+border:none;
+color:#fff;
+border-radius:8px
+}

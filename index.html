@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Order Bill Generator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<div class="form">
+<h2>Order Entry</h2>
+<input id="orderNo" placeholder="Party Name">
+<input type="date" id="orderDate">
+<input id="quality" placeholder="Quality">
+<input id="quantity" placeholder="Quantity">
+<input id="rate" placeholder="Rate">
+<input id="totalQty" placeholder="Total Quantity">
+<input id="chalan" placeholder="No. of Chalan">
+<input id="payment" placeholder="Payment">
+<input id="perDay" placeholder="Approx per Day">
+<input id="delivery" placeholder="Delivery Terms">
+<input id="weaver" placeholder="Weaver">
+<input id="brokerName" placeholder="Broker Name">
+<input id="brokerNo" placeholder="Broker Number">
+<button onclick="generate()">Generate Bill</button>
+</div>
+
+<div class="preview" id="preview">
+<div class="content">
+<h3 style="text-align:center;">ORDER DETAIL</h3>
+<h3 Style="font-size: small; font-weight: normal;"> We are deal with all types of fabric.</h3>
+<h3 Style="font-size: small; font-weight: normal;"> Please contact us for selling and purchase of any Fabric!!!</h3>
+<p><strong>Party Name: </strong><span id="porderNo"></span></p>
+<p><strong>Date: </strong><span id="porderDate"></span></p>
+<p><strong>Quality: </strong><span id="pquality"></span></p>
+<p><strong>Quantity: </strong><span id="pquantity"></span></p>
+<p><strong>Rate: </strong><span id="prate"></span></p>
+<p><strong>Total Quantity: </strong><span id="ptotalQty"></span></p>
+<p><strong>No. of Chalan: </strong><span id="pchalan"></span></p>
+<p><strong>Payment: </strong><span id="ppayment"></span></p>
+<p><strong>Approx / Day: </strong><span id="pperDay"></span></p>
+<p><strong>Delivery: </strong><span id="pdelivery"></span></p>
+<p><strong>Weaver: </strong><span id="pweaver"></span></p>
+<p><strong>Broker: </strong><span id="pbrokerName"></span></p>
+<p><strong>Broker Number: </strong><span id="pbrokerNo"></span></p>
+<h3 Style="font-size: small; font-weight: normal;"> THANK YOU SO MUCH FOR CHOSING US AS YOUR SALES PARTNER!</h3>
+<h3 Style="font-size: small; font-weight: normal;"> YOU JUST MADE OUR BUSINESS GROW WITH US.</h3>
+</div>
+</div>
+</div>
+
+<div class="actions">
+<button onclick="download()">Download Image</button>
+<button onclick="share()">Share WhatsApp</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
