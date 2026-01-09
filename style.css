@@ -36,10 +36,13 @@ border-radius:8px
 background:url("images/bill.jpg") center/cover no-repeat;
 min-height:935px;
 border-radius:5px;
+width: 794px;     /* A4 width in px */
+height: 1123px;   /* A4 height in px */
+margin: auto;
 position:relative
 }
 .content{
-background:rgba(255,255,255,.95);
+background:rgba(255, 255, 255, 0);
 margin:80px;
 padding:25px;
 border-radius:12px

@@ -2,14 +2,24 @@ function generate(){
 ['orderNo','orderDate','quality','quantity','rate','totalQty','chalan','payment','perDay','delivery','weaver','brokerName','brokerNo']
 .forEach(id=>document.getElementById('p'+id).innerText=document.getElementById(id).value||'-')
 }
-function download(){
-html2canvas(document.getElementById('preview')).then(c=>{
-let a=document.createElement('a');
-let n=document.getElementById('orderNo').value||'order-bill';
-a.download=n.replace(/[^a-zA-Z0-9_-]/g,'_')+'.png';
-a.href=c.toDataURL();
-a.click()
-})
+function download() {
+  const element = document.getElementById('preview');
+  const name = document.getElementById('orderNo').value || 'order-bill';
+
+  html2canvas(element, {
+    scale: 2,                 // consistent quality
+    useCORS: true,
+    backgroundColor: null,
+    width: element.offsetWidth,
+    height: element.offsetHeight,
+    windowWidth: element.offsetWidth,
+    windowHeight: element.offsetHeight
+  }).then(canvas => {
+    const a = document.createElement('a');
+    a.download = name.replace(/[^a-zA-Z0-9_-]/g, '_') + '.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  });
 }
 function share(){
 html2canvas(document.getElementById('preview')).then(c=>{
